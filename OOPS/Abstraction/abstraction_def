@@ -1,0 +1,41 @@
+What is Abstraction in Python?
+
+Abstraction means hiding unnecessary details and showing only the important features.
+
+It helps you use an object without knowing how it works internally.
+
+👉 Example from real life:
+You use a mobile phone to call someone.
+You don’t know what wires, chips, circuits are working inside → those details are hidden.
+You see only the buttons, apps, and touchscreen → important things are shown.
+
+Same in Python.
+
+✅ Why Abstraction?
+
+Reduces complexity
+
+Improves code readability
+
+Gives security to data
+
+You focus only on “what to do”, not “how it is done”
+
+✅ How to Achieve Abstraction in Python?
+
+Python gives abstraction using:
+
+✔ 1. Abstract Classes
+✔ 2. Abstract Methods
+
+These are provided by the abc module (Abstract Base Class).
+
+✅ When to Use Abstraction?
+
+Use abstraction when:
+
+You want to force child classes to implement a method
+
+You want a common interface for all subclasses
+
+You want to hide unnecessary code

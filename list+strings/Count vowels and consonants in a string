@@ -1,0 +1,10 @@
+vowels='AEIOUaeiou'
+vow=0
+con=0
+word=input("enter word:")
+for i in word:
+    if i in vowels:
+        vow+=1
+    else:
+        con+=1
+print(f"the number of vowels is {vow} and number of consonents is {con} ")

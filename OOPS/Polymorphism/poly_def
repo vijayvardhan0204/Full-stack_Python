@@ -1,0 +1,21 @@
+Polymorphism means “many forms.”
+In Python, the same function name or operator can work in different ways depending on the object or data type.
+
+Python supports 3 main types of polymorphism:
+
+1. Method Overriding (Run-time Polymorphism)
+
+When a child class redefines a method of the parent class.
+
+2. Polymorphism with Same Method Names (Duck Typing)
+
+Even without inheritance, if different classes have the same method, Python allows calling them in a loop.
+
+3. Operator Overloading (Special Methods)
+
+Operators like +, -, * can be customized for classes.
+
+Simple One-Line Difference
+
+Overloading → Same method name, different parameters (not supported in Python).
+Overriding → Child class replaces parent’s method (supported in Python).

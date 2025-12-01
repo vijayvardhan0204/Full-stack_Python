@@ -1,0 +1,24 @@
+✅ What is a Linked List?
+
+A Linked List is a data structure made of nodes, where each node stores:
+
+data/value
+
+link (pointer) to next node
+
+
+Unlike arrays/lists:
+
+❌ They are not stored in continuous memory
+
+✔️ They are dynamic (grow/shrink easily)
+
+✔️ Insertion/Deletion is fast (O(1)) when you know the node
+
+✅ Types of Linked Lists
+
+Singly Linked List → each node points to next
+
+Doubly Linked List → next + previous pointers
+
+Circular Linked List → last node points back to head

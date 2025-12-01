@@ -1,0 +1,23 @@
+'''
+Set in Python (Easy Definition)
+
+A set in Python is a collection of unique, unordered elements.
+
+Unique → No duplicates allowed
+
+Unordered → No index, no fixed position
+
+Mutable → You can add or remove items
+
+Uses { } curly braces
+
+example:
+s = {1, 2, 3, 3, 4}
+print(s)   # Output: {1, 2, 3, 4}  (duplicate 3 removed)
+
+Key Points:
+
+Set items must be immutable (numbers, strings, tuples).
+Sets are useful for removing duplicates, 
+mathematical operations like union, intersection, difference.
+'''

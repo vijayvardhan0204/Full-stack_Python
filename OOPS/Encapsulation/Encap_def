@@ -1,0 +1,63 @@
+#  ✅ Encapsulation in Python
+# Definition
+
+# Encapsulation means wrapping data (variables) and methods (functions) into a single unit (class) and controlling access to that data using access modifiers.
+
+# In simple words:
+# 👉 Hide the data inside the class and allow access only through methods. 
+
+# ✅ Why Encapsulation?
+
+# To protect data from accidental modification
+
+# To control how data is accessed
+
+# To avoid misuse of variables
+
+# To follow OOP principles
+
+# To create secure and clean code 
+
+#  ✅ Access Modifiers in Python
+
+# Python provides 3 types of variable/method access: 
+
+#  1️⃣ Public (name)
+
+# Accessible everywhere 
+
+class Student:
+    def __init__(self):
+        self.name = "Vijay"   # public variable
+
+s = Student()
+print(s.name)
+
+#  2️⃣ Protected (_name)
+
+# Should NOT be used outside the class (but Python allows it)
+
+class Student:
+    def __init__(self):
+        self._marks = 90  # protected
+
+s = Student()
+print(s._marks)   # possible but not recommended
+
+# 3️⃣ Private (__name)
+
+# Cannot be accessed directly
+
+# Python performs name-mangling 
+
+class Student:
+    def __init__(self):
+        self.__password = "abcd1234"  # private
+    
+    def show(self):
+        print(self.__password)
+
+s = Student()
+# print(s.__password)  ❌ Error
+
+s.show()  # ✔ accessible through method
