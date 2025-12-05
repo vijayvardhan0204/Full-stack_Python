@@ -1,0 +1,74 @@
+# --------------------------------------------------------
+# COMPOSITION vs AGGREGATION in OOP (Python Examples)
+# --------------------------------------------------------
+
+# ========================================================
+# 1. COMPOSITION (Strong HAS-A relationship)
+#    - One class OWNS another class.
+#    - If the main object is deleted, the contained object
+#      is also destroyed.
+#    - Example: Car has an Engine.
+# ========================================================
+
+class Engine:
+    def start(self):
+        print("Engine started")
+
+
+class Car:
+    def __init__(self):
+        self.engine = Engine()   # Car creates/owns Engine
+
+    def start_car(self):
+        self.engine.start()
+
+
+# Test Composition
+car = Car()
+car.start_car()
+
+
+# ========================================================
+# 2. AGGREGATION (Weak HAS-A relationship)
+#    - One class USES another class.
+#    - The contained object can exist independently.
+#    - Example: Student has a College.
+# ========================================================
+
+class College:
+    def __init__(self, name):
+        self.name = name
+
+
+class Student:
+    def __init__(self, name, college):
+        self.name = name
+        self.college = college   # Student uses College object
+
+
+# Create College independently
+college_obj = College("IIT")
+
+# Link it to Student
+student = Student("Vijay", college_obj)
+
+print(student.college.name)
+
+
+# ========================================================
+# DIFFERENCE TABLE
+# --------------------------------------------------------
+# Composition:
+#   - Strong relationship
+#   - Class owns the object
+#   - Object created INSIDE the class
+#   - Lifetime depends on parent
+#   - Example: Car -> Engine
+#
+# Aggregation:
+#   - Weak relationship
+#   - Class uses the object
+#   - Object created OUTSIDE the class
+#   - Independent lifetime
+#   - Example: Student -> College
+# ========================================================
