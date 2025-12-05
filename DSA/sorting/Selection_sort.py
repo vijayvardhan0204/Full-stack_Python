@@ -8,3 +8,5 @@ for i in range(n-1):
     min_value=mylist.pop(min_index)
     mylist.insert(i,min_value)
 print(mylist)
+
+

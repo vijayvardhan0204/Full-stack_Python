@@ -7,3 +7,5 @@ for i in range(n-1):
         if mylist[j]>mylist[j+1]:
             mylist[j],mylist[j+1]=mylist[j+1],mylist[j]
 print(mylist)
+
+# after every  iter last element is sorted 

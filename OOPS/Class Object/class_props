@@ -1,0 +1,184 @@
+# ✅ 1. Class
+
+# A class is a blueprint/template for creating objects.
+
+# It groups data (variables) and actions (methods) together.
+
+# Example:
+class Student:
+    pass
+
+
+# A class does not occupy memory until objects are created.
+
+# ✅ 2. Object
+
+# An object is an instance of a class.
+
+# It has its own data and can use the class's methods.
+
+# Example:
+s1 = Student()   # object 1
+s2 = Student()   # object 2
+# Each object has separate memory.
+
+
+
+# ✅ 3. Types of Variables in Python OOP
+# A. Instance Variables
+
+# Specific to each object
+
+# Defined inside constructor or methods using self.variable
+
+# Example:
+class Student:
+    def __init__(self, name, age):
+        self.name = name      # instance variable
+        self.age = age        # instance variable
+
+
+# Each object will have its own name and age.
+
+# B. Class Variables (Static Variables)
+
+# Shared by all objects
+
+# Defined inside class but outside methods
+
+# Example:
+class Student:
+    school = "ABC School"    # class variable
+
+    def __init__(self, name):
+        self.name = name
+
+
+# All objects share the same value of school.
+
+
+# C. Local Variables
+# Variables declared inside a method
+# Only accessible inside that method
+# Example:
+class Demo:
+    def show(self):
+        x = 10   # local variable
+        print(x)
+
+# x cannot be accessed outside show().
+
+# ✅ 4. Types of Methods in Python OOP
+
+# Python supports 3 types of methods:
+
+# A. Instance Methods
+
+# Take self as the first parameter
+
+# Can access instance variables
+
+# Example:
+class Student:
+    def __init__(self, name):
+        self.name = name
+
+    def display(self):      # instance method
+        print("Name:", self.name)
+
+# B. Class Methods
+
+# Use @classmethod decorator
+
+# First parameter is cls
+
+# Can access class variables
+
+# Example:
+class Student:
+    school = "ABC School"
+
+    @classmethod
+    def show_school(cls):
+        print(cls.school)
+
+# C. Static Methods
+
+# Use @staticmethod
+
+# No self or cls
+
+# Used for utility functions
+
+# Example:
+class Math:
+    @staticmethod
+    def add(a, b):
+        return a + b
+
+# ✅ 5. Constructors in Python
+
+# Constructor in Python = __init__() method
+# It runs automatically when an object is created.
+
+# Purpose:
+
+# Initialize instance variables
+
+# Example:
+class Student:
+    def __init__(self, name, age):
+        self.name = name
+        self.age = age
+
+# Complete Example Covering Everything
+class Student:
+    school = "ABC School"      # class variable
+
+    def __init__(self, name, age):   # constructor
+        self.name = name             # instance variable
+        self.age = age
+
+    def display(self):               # instance method
+        print(f"Name: {self.name}, Age: {self.age}")
+
+    @classmethod
+    def show_school(cls):            # class method
+        print("School:", cls.school)
+
+    @staticmethod
+    def welcome():                   # static method
+        print("Welcome to the student portal!")
+
+# Usage:
+s1 = Student("Vijay", 21)
+
+s1.display()
+Student.show_school()
+Student.welcome()
+
+
+
+# Class – Blueprint containing variables + methods.
+
+# Object – Instance of class; has separate memory.
+
+# Types of Variables
+
+# Instance Variable – unique per object
+
+# Class Variable – shared by all objects
+
+# Local Variable – exists only inside method
+
+# Types of Methods
+
+# Instance Method (self)
+
+# Class Method (cls)
+
+# **Static Method (@staticmethod)
+
+# Constructor – __init__() automatically runs, initializes object.
+
+

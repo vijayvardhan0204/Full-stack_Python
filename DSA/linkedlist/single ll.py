@@ -1,3 +1,5 @@
+# Single linked list
+
 # Node class represents one element in the linked list
 class Node:
     def __init__(self, data):
