@@ -10,6 +10,8 @@ class Human:
         print("i can eat")
     def work(self):
         print("i can work")
+    def sleep(self):
+        print("Human sleep")
 class Male:
     def __init__(self,name):
         self.name=name
@@ -17,6 +19,8 @@ class Male:
         print("i can flirt")
     def work(self):
         print("i can code")
+    def sleep(self):
+        print("Male sleep")
 class boy(Human,Male):
     def __init__(self,name,num_heart,language):
         Male.__init__(self,name)
@@ -27,8 +31,10 @@ class boy(Human,Male):
     def work(self):
         print("i can test")
 boy_1=boy("vijay",1,"python")
-boy_1.work()#i can work because 1st Human props are inheriting
-Male.work(boy_1)
+boy_1.sleep()#Human sleep because 1st Human props are inheriting
+boy_1.work() #access boy methods as 1st priority is given to boy
+Male.work(boy_1)#to access male methods
+Human.work(boy_1)
 print(boy.mro()) #1st priority is given to boy
 #Method resolution order
 

@@ -3,7 +3,7 @@
 (like multi-level + multiple + hierarchical together).
 Example structure:
 
-    #    A
+    #   A
     #  / \
       B   C
        \ /
