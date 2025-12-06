@@ -1,0 +1,10 @@
+n = int(input("enter value: "))
+
+for i in range(n):
+    for j in range(n - i - 1):
+        print(" ", end="")      # leading spaces
+
+    for k in range(i + 1):
+        print("*   ", end="")   # star + 3 spaces
+
+    print()
