@@ -1,3 +1,18 @@
+'''CLASS: datetime.datetime
+
+(Contains date + time)
+
+Common Methods:
+now()
+today()
+utcnow()
+strftime()
+strptime()
+replace()
+fromtimestamp()
+timestamp()
+date()
+time()'''
 import datetime
 
 # Current date & time
