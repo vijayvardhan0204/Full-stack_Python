@@ -1,0 +1,27 @@
+A dictionary in Python is an unordered, mutable collection of key–value pairs.
+Each value is accessed using its unique key instead of an index.
+
+Syntax
+my_dict = { key : value }
+
+Example
+
+student = {
+    "name": "Vijay",
+    "age": 21,
+    "marks": 85
+}
+
+print(student["name"])   # Output: Vijay
+
+Important Features
+
+Uses key–value pairs
+
+Keys must be unique
+
+Dictionary is mutable (can change values)
+
+Keys can be strings, numbers, or tuples
+
+Values can be of any data type
