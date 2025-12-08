@@ -61,3 +61,5 @@ s = Student()
 # print(s.__password)  ❌ Error
 
 s.show()  # ✔ accessible through method
+print(s._Student__password)
+print(Student._Student__password)
