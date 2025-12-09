@@ -2,12 +2,12 @@
 
 try:
     a = int(input("Enter number: "))
-    print(10 / a)
+    result = 10 / a
 except ZeroDivisionError:
-    print("You cannot divide by zero!")
+    print("Cannot divide by zero!")
 except ValueError:
     print("Invalid input!")
 else:
-    print("Successful execution!")
+    print("Result =", result)
 finally:
-    print("Program ended.")
+    print("This will always run.")
