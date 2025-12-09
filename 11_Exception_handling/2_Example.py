@@ -1,3 +1,5 @@
+# Sample Example
+
 try:
     a = int(input("Enter number: "))
     print(10 / a)
