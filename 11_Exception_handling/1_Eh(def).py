@@ -1,4 +1,4 @@
-Exception Handling in Python
+'''Exception Handling in Python
 
 Exception Handling means managing runtime errors in a program so that the program does not crash and can continue running smoothly.
 
@@ -26,4 +26,4 @@ Runs always, whether exception occurs or not (commonly used for cleanup tasks li
 
 5. raise
 
-Used to intentionally raise an exception.
+Used to intentionally raise an exception.'''
