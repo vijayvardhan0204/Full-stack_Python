@@ -1,0 +1,28 @@
+Multithreading = Running multiple tasks concurrently in the same program using multiple threads.
+
+A thread is like a small worker inside your program that can run code independently.
+
+
+Why use Multithreading?
+
+You use multithreading when you want to perform tasks that involve waiting, such as:
+
+Downloading files
+
+Making API calls
+
+Reading/writing files
+
+Doing background tasks
+
+Handling multiple users (like in servers)
+
+⚠️ Important Note — GIL
+
+Python has a Global Interpreter Lock (GIL), which means:
+
+Only one thread can execute Python code at a time
+
+Multithreading does NOT speed up CPU-heavy tasks
+
+But it does help for I/O-bound tasks (network, file, waiting).
