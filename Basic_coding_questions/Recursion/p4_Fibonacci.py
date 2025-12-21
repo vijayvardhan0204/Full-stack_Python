@@ -7,3 +7,6 @@ def fib(n):
 
 for i in range(6):
     print(fib(i), end=" ")
+
+
+# Interview note: recursive Fibonacci is slow, but logic is important.
