@@ -1,0 +1,11 @@
+What is a Tree (Data Structure)?
+
+A tree is a hierarchical data structure made of nodes.
+
+Root → top node
+
+Parent → node with children
+
+Child → node under a parent
+
+Leaf → node with no children
