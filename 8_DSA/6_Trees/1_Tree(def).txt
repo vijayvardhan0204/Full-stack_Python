@@ -1,6 +1,6 @@
 What is a Tree (Data Structure)?
 
-A tree is a hierarchical data structure made of nodes.
+A tree is a hierarchical data structure made of nodes used to represent hierarchical relationships.
 
 Root → top node
 
@@ -20,3 +20,14 @@ Binary Search Tree (BST) – left < root < right
 Heap – complete tree (min / max)
 
 AVL Tree – self-balancing BST
+
+
+Why Trees Are Used?
+
+File systems
+
+Databases
+
+Searching & sorting
+
+AI & decision making
