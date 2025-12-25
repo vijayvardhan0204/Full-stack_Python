@@ -9,3 +9,14 @@ Parent → node with children
 Child → node under a parent
 
 Leaf → node with no children
+
+
+Types of Trees (Important)
+
+Binary Tree – max 2 children
+
+Binary Search Tree (BST) – left < root < right
+
+Heap – complete tree (min / max)
+
+AVL Tree – self-balancing BST
