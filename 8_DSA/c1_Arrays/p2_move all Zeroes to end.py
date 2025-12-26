@@ -21,3 +21,6 @@ if __name__ == "__main__":
     pushZerosToEnd(arr)
     for num in arr:
         print(num, end=" ")
+
+# Time Complexity: O(n), as we are traversing the array only once.
+# Auxiliary Space: O(1)
