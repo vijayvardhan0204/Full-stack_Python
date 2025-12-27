@@ -1,3 +1,5 @@
+# Mve all zeroes to end
+
 def pushZerosToEnd(arr):
     
     # Pointer to track the position
