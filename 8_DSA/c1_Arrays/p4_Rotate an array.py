@@ -1,40 +1,34 @@
 # Python Program to left rotate the array by d positions
 
-# Approach 1 (Using Temporary Array)
-# using temporary array
+# Approach 1 (Using Juggling algorithm)
 
-# Function to rotate array
+# Function to rotate an array by d elements to the left
+import math
+
 def rotateArr(arr, d):
-    n = len(arr)
+    n = len(arr)          # size of array
 
-    # Handle case when d > n
+    # Handle the case where d > size of array
     d %= n
-    
-    # Storing rotated version of array
-    temp = [0] * n
 
-    # Copy last n - d elements to the front of temp
-    for i in range(n - d):
-        temp[i] = arr[d + i]
+    # Number of cycles based on GCD of n and d
+    cycles = math.gcd(n, d)
 
-    # Copy the first d elements to the back of temp
-    for i in range(d):
-        temp[n - d + i] = arr[i]
+    # Loop through each cycle
+    for i in range(cycles):
+        startEle = arr[i]     # store starting element of current cycle
+        currIndx = i          # current index starts from cycle index
 
-    # Copying the elements of temp in arr
-    # to get the final rotated array
-    for i in range(n):
-        arr[i] = temp[i]
+        # Rotate elements within the current cycle
+        while True:
+            nextIndx = (currIndx + d) % n  # calculate next index
+            if nextIndx == i:              # cycle completed
+                break
+            arr[currIndx] = arr[nextIndx]  # move next element to current position
+            currIndx = nextIndx             # update current index
 
-if __name__ == "__main__":
-    arr = [1, 2, 3, 4, 5, 6]
-    d = 2
-
-    rotateArr(arr, d)
-
-    # Print the rotated array
-    for i in range(len(arr)):
-        print(arr[i], end=" ")
+        # Place the stored element in its correct position
+        arr[currIndx] = startEle
 
 
 
