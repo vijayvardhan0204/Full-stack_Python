@@ -1,24 +1,39 @@
-def sort123(arr):
+def sort012(arr):
     n = len(arr)
-    low = 0
+    
+    # initialize three pointers:
+    # lo: boundary for 0s
+    # mid: current element being checked
+    # hi: boundary for 2s
+    lo = 0
+    hi = n - 1
     mid = 0
-    high = n - 1
-
-    while mid <= high:
+    
+    # process elements until mid crosses hi
+    while mid <= hi:
         if arr[mid] == 0:
-            arr[low],arr[mid]=arr[mid],arr[low]
-            low += 1
+            
+            # current is 0: swap with lo and move both 
+            # pointers forward
+            arr[lo], arr[mid] = arr[mid], arr[lo]
+            lo += 1
             mid += 1
-
         elif arr[mid] == 1:
+            # current is 1: it's already in correct position
             mid += 1
-        
-        else :
-            arr[mid],arr[high] = arr[high],arr[mid]
-            high -= 1
+        else:
+            # current is 2: swap with hi and move hi backward
+            # do not increment mid, as swapped value needs
+            # to be re-checked
+            arr[mid], arr[hi] = arr[hi], arr[mid]
+            hi -= 1
 
-    return arr
+if __name__ == "__main__":
+    arr = [0, 1, 2, 0, 1, 2]
+    n = len(arr)
+    
+    # sort the array in-place
+    sort012(arr)
 
-if __name__ =="__main__":
-    arr=[0,0,1,2,1,0,0,2,1,2,2,2,1]
-    print(sort123(arr))
+    for i in range(n):
+        print(arr[i], end=' ')
