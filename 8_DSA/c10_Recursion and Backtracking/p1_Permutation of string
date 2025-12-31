@@ -1,0 +1,72 @@
+def genPermutations(i, n, cnt, res, perm):
+    """
+    Recursive function to generate all unique permutations.
+
+    i    : current position being filled in the permutation
+    n    : total length of the input string
+    cnt  : dictionary storing remaining frequency of each character
+    res  : list to store all generated permutations
+    perm : current permutation being formed
+    """
+
+    # Base case:
+    # If current permutation length equals input length,
+    # add it to result list and return
+    if i == n:
+        res.append(perm)
+        return
+
+    # Try placing each character whose frequency is still > 0
+    for ch, count in cnt.items():
+
+        # Skip characters that are already fully used
+        if count == 0:
+            continue
+
+        # Choose the current character:
+        # reduce its frequency to mark it as used
+        cnt[ch] -= 1
+
+        # Recurse to fill the next position in the permutation
+        genPermutations(i + 1, n, cnt, res, perm + ch)
+
+        # Backtrack:
+        # restore the frequency so that other permutations can use it
+        cnt[ch] += 1
+
+
+def findPermutation(s):
+    """
+    Function to generate all unique permutations of a string.
+
+    s : input string
+    """
+
+    # List to store all permutations
+    res = []
+
+    # Dictionary to store frequency of each character
+    cnt = {}
+
+    # Build the frequency map from the input string
+    for c in s:
+        cnt[c] = cnt.get(c, 0) + 1
+
+    # Length of the input string
+    n = len(s)
+
+    # Start generating permutations from index 0
+    genPermutations(0, n, cnt, res, "")
+
+    return res
+
+
+# Driver code
+if __name__ == "__main__":
+    s = "ABC"
+
+    # Generate permutations
+    res = findPermutation(s)
+
+    # Print all permutations
+    print(" ".join(res))
