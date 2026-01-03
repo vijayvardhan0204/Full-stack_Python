@@ -36,14 +36,14 @@ def nonRep(s):
             # Mark character as repeated
             vis[index] = -2  
 
-    idx = -1
+    idx = len(s)
 
     # Find the smallest index of the non-repeating characters
     for i in range(MAX_CHAR):
         if vis[i] >= 0 :
             idx = min(idx,vis[i])
 
-    return '\$' if idx == -1 else s[vis[idx]]
+    return '\$' if idx == len(s) else s[idx]
 
 
 s = "aabbccc"
