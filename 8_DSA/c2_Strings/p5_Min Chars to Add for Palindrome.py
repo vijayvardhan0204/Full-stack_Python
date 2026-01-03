@@ -1,3 +1,5 @@
+# Min Chars to Add for Palindrome
+# Using lps array of KMP Algorithm - O(n) Time and O(n) Space
 def computeLPSArray(pat):
     n = len(pat)
     lps = [0] * n
