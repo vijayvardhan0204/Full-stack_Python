@@ -19,5 +19,5 @@ def isBalanced(s):
     
 
 if __name__ == "__main__" :
-      s='{[({})]}]'
+      s='{[({})]}'
       print(isBalanced(s))
