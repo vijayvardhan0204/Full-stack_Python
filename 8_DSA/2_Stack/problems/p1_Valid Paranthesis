@@ -1,0 +1,23 @@
+def isBalanced(s):
+    n = len(s)
+    st = []
+    for i in range(n):
+        if s[i] == '(' or s[i] =='{' or s[i] == '[' :
+            st.append(s[i])
+        else:
+            if st and ((st[-1] == '(' and s[i]==')') or
+                        (st[-1] == '[' and s[i] == ']') or
+                        (st[-1] == '{' and s[i] == '}')) :
+                            st.pop()
+
+            else:
+                  return False
+    if st:
+          return False
+    else:
+          return True
+    
+
+if __name__ == "__main__" :
+      s='{[({})]}]'
+      print(isBalanced(s))
