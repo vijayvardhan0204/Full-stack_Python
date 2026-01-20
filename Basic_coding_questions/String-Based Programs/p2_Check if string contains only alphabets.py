@@ -1,4 +1,4 @@
-s = input("Enter string: ")
+s = input("Enter string:")
 
 if s.isalpha():
     print("Contains only alphabets")
