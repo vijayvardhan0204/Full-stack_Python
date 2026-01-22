@@ -1,7 +1,7 @@
 import threading
 
 def display():
-    print("Thread is now running")
+    print("Thread is now running.")
 
 # Create thread
 t = threading.Thread(target=display)

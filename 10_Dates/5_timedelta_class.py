@@ -4,7 +4,7 @@ Methods / Attributes:
 days
 seconds
 microseconds
-Supports +, -, *, / operations'''
+Supports +, -, *, / operations''
 
 import datetime
 
