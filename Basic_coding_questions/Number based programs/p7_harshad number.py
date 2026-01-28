@@ -1,5 +1,6 @@
 '''A Harshad number = number divisible by sum of its digits
-Example: 18 → 1 + 8 = 9, 18 % 9 = 0'''
+Example: 18 → 1 + 8 = 9, 18 % 9 = 0
+'''
 
 num = int(input("Enter number: "))
 temp = num
