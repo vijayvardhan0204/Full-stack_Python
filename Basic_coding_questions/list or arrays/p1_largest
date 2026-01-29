@@ -1,0 +1,8 @@
+lst = list(map(int, input("Enter elements: ").split()))
+largest = lst[0]
+
+for i in lst:
+    if i > largest:
+        largest = i
+
+print("Largest element:", largest)
